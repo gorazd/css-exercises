@@ -1,0 +1,47 @@
+body {
+  margin: 4px;
+}
+
+h1,
+h2,
+h3 {
+  padding: 20px;
+  margin: 0;
+  margin-bottom: 4px;
+  /*  the default box-sizing is content-box
+      so the width is from one content edge
+      to the other 
+  */
+  width: 200px;
+
+  color: #333;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #aaa;
+  border-bottom-color: #999;
+  background-color: #eee;
+}
+
+h2 {
+  /*  the elements width extends from 
+      one border edge to another 
+  */
+  box-sizing: border-box;
+  
+  border-top-color: #666;
+}
+
+h3 {
+  width: auto;
+  box-sizing: border-box;
+
+  /*  to respect the width and vertical spacing
+      it cannot be display: inline
+  */
+  display: inline-block;
+}
+
+p {
+  padding-left: 40px;
+  padding-right: 40px;
+}
