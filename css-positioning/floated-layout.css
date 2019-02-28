@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper,
+header,
+main,
+aside,
+footer {
+  padding: 30px;
+  min-height: 200px;
+  border: 10px solid red; 
+}
+
+.wrapper {
+  padding: 0;
+}
+
+main {
+  width: 70%;
+  min-height: 300px;
+
+  float: left;
+
+  border-color: orange;
+}
+
+aside {
+  width: 30%;
+
+  float: right;
+
+  border-color: yellow;
+}
+
+@media (max-width: 620px) {
+  main,
+  aside {
+    width: 100%;
+    border-color: violet;
+  }
+}
+
+
+@media (max-width: 320px) {
+
+}
+
+footer {
+  clear: both;
+  border-color: blue;
+}
+

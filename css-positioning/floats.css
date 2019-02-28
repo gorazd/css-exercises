@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+article {
+  /* center the element inside its container */
+  margin: 20px auto;
+  /* give it the ability to shrink below 600px */
+  max-width: 600px;
+  /* make shure to include the floated elements in the cointainer height */
+  overflow: hidden;
+
+  border: 1px solid red;
+}
+
+.fake-image {
+  width: 150px;
+  height: 200px;
+
+  /* make space around the image */
+  margin-right: 1.15rem;
+  margin-bottom: 1.15rem;
+
+  border: 10px solid yellow;
+
+  /* float */
+  float: left;
+}
+
+.article-right .fake-image {
+  float: right;
+  margin-right: 0;
+  margin-left: 1.15rem;
+}
+
+.fake-link {
+  float: left;
+  clear: both;
+}
+
+.article-right .fake-link {
+  float: right;
+}
+
+h2 {
+  margin-top: 0; 
+}
