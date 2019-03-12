@@ -103,3 +103,25 @@ nav a.logo {
   background-color:red;
   color: white;
 }
+
+.wrapper {
+  margin-top: 40px;
+  
+  display: flex;
+  flex-flow: row nowrap;
+
+  border: 2px dashed black; 
+}
+
+nav.wrapper-nav, main, aside {
+  margin: 0; /* reset the margin */
+  min-height: 200px;
+
+  flex-basis: 20%;
+
+  border: 2px dashed blue; 
+}
+
+main {
+  flex-basis: 60%;
+}
