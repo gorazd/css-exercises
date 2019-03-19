@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+:root {
+  /* define a custom property */
+  /* in a global scope */
+  --box-size: 100px;
+}
+
+.card {
+  position: relative;
+  /* the children keep the 3d properties */
+  transform-style: preserve-3d;
+  
+  font-size: 4em;
+  border: 5px solid red;
+}
+
+.side {
+  /* overwrite the custom property value */
+  --box-size: 150px;
+
+  /* use the custom property by wrapping it in var() */
+  width: var(--box-size);
+  height: var(--box-size);
+  text-align: center;
+  line-height: var(--box-size);
+  
+  /* you can't see the element from behind */
+  backface-visibility: hidden;
+}
+
+.side-front {
+  color: black;
+}
+
+.side-back {
+  transform: rotateY(180deg);
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  color: red;
+}
+
+/* Transforms */
+body {
+  perspective: 150px;
+  /* default value */
+  perspective-origin: center;
+}
+
+.transform {
+  transition: transform 1000ms ease-in-out;
+}
+
+body:hover .transform {
+  transform: rotateY(180deg);
+}
