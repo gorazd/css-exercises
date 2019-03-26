@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.box {
+  width: 50px; 
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* animation properties */
+  animation-duration: 2000ms;
+  animation-delay: 500ms;
+  animation-timing-function: linear;
+  animation-name: goingAround;
+  animation-fill-mode: forwards; /* backwards */
+
+  background-color: #ff0000;
+}
+
+@keyframes goingAround {
+  /* starting point */
+  0% {
+    background-color: #ff0000;
+  }
+  50% {
+    left: calc(100% - 50px);
+    background-color: #ff00aa;
+  }
+  /* the ending point of the animation */
+  100% {
+    left: calc(100% - 50px);
+    background-color: #000000;
+  }
+}
