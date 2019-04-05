@@ -1,3 +1,8 @@
+:root {
+  /* box size will be half of the shorter side of the viewport */
+  --boxSize: 50vmin;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,35 +12,55 @@ body {
 }
 
 .box {
-  width: 50px; 
-  height: 50px;
+  width: var(--boxSize); 
+  height: var(--boxSize);
 
   position: absolute;
   top: 0;
   left: 0;
 
   /* animation properties */
-  animation-duration: 2000ms;
-  animation-delay: 500ms;
-  animation-timing-function: linear;
+  animation-duration: 4000ms;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
   animation-name: goingAround;
   animation-fill-mode: forwards; /* backwards */
+  animation-iteration-count: infinite;
 
-  background-color: #ff0000;
+  border: 10px solid #ff0000;
 }
 
 @keyframes goingAround {
   /* starting point */
   0% {
-    background-color: #ff0000;
+    top: 0;
+    left: 0;
+
+    border-color: #ff0000;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - var(--boxSize));
+
+    border-color: #ff00aa;
   }
   50% {
-    left: calc(100% - 50px);
-    background-color: #ff00aa;
+    top: calc(100% - var(--boxSize));
+    left: calc(100% - var(--boxSize));
+
+    border-color: #ffff00;
+  }
+  75% {
+    top: calc(100% - var(--boxSize));
+    left: 0;
+
+    border-color: #ffaa00;
   }
   /* the ending point of the animation */
   100% {
-    left: calc(100% - 50px);
-    background-color: #000000;
+    top: 0;
+    left: 0;
+    
+    border-color: #ff0000;
   }
 }
