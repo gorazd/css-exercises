@@ -15,6 +15,10 @@ body {
   
   align-content: center;
 
+  background-color: darkgreen;
+  background: -webkit-radial-gradient(center,  green 0%, darkgreen 75%);
+  background: -moz-radial-gradient(center,  green 0%, darkgreen 75%);
+  background: radial-gradient(center,  green 0%, darkgreen 75%);
 }
 
 /*
@@ -62,8 +66,11 @@ body {
   height: 100%;
 
   display: block;
+
   position: absolute;
-  
+  top: 0;
+  left: 0;
+
   /* move the box up */
   transform: translateY(-80%);
 
@@ -76,7 +83,10 @@ body {
   height: 100%;
 
   display: block;
+
   position: absolute;
+  top: 0;
+  left: 0;
   
   /* move the box up */
   transform: translateY(80%);
@@ -96,6 +106,7 @@ body {
 }
 
 .ball-transform {
+  /* added delay for when you hover out of the element */
   transition: transform 350ms ease-out 500ms;
 }
 
