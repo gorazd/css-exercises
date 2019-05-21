@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Loops</title>
+  <style>
+    .message {
+      padding: 20px;
+      border: 1px solid;
+    }
+    .message:before {
+      padding-right: 10px;
+    }
+    .message-success {
+      color: green;
+    }
+    .message-success:before {
+      content: '\02713';
+    }
+    .message-error {
+      color: red;
+    }
+    .message-error:before {
+      content: '\02717';
+    }
+  </style>
+</head>
+<body>
+  
+  <article>
+    <h1 id="appTitle">APP</h1>
+    <input type="text" id="myName" placeholder="For example Victoria">
+    <button id="nameButton">Save my name</button>
+    <button id="undoButton">Undo</button>
+    <p id="messageBox" class="message">This is a message to you</p>
+  </article>
+
+  <script src="js-loops.js"></script>
+</body>
+</html>
