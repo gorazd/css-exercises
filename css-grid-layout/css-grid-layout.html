@@ -10,11 +10,111 @@
 <body>
   
   <div class="wrapper">
-    <header>header</header>
-    <main>content</main>
-    <aside>nav</aside>
-    <footer>footer</footer>
+    <header class="main-header">
+      <!-- title, payoff, image, logo -->
+      <h1>The Rainbow Bakery</h1>
+      <p>After the rain comes the sugar</p>
+    </header>
+    <main>
+      <!-- articles: image, title, text, link -->
+      <!-- a recipie -->
+      <article class="recipe-card">
+        <img src="https://via.placeholder.com/300" alt="temporary image placeholder">
+        <header>
+          <h2>Cheese Cake</h2>
+          <p>The finest cheese cake in all the rainbow land.</p>
+          <a href="#">Do the cheese recipe</a>
+        </header>
+        <ul>
+          <li>Gluten Free</li>
+          <li>Simple</li>
+        </ul>
+      </article>
+      <!-- a recipie -->
+      <article class="recipe-card">
+        <img src="https://via.placeholder.com/300" alt="temporary image placeholder">
+        <header>
+          <h2>Extra Buttery Croissant</h2>
+          <p>When you already thought there wass enough butter...</p>
+          <a href="#">Butter it up</a>
+        </header>
+        <ul>
+          <li>Quick</li>
+          <li>French</li>
+        </ul>
+      </article>
+      <!-- a recipie -->
+      <article class="recipe-card">
+        <img src="https://via.placeholder.com/300" alt="temporary image placeholder">
+        <header>
+          <h2>The Cannolo from Palermo</h2>
+          <p>This is a recipe that you can't refuse.</p>
+          <a href="#">Do it Sicily style</a>
+        </header>
+        <ul>
+          <li>Italian</li>
+          <li>To die for</li>
+        </ul>
+      </article>
+      <!-- a recipie -->
+      <article class="recipe-card">
+        <img src="https://via.placeholder.com/300" alt="temporary image placeholder">
+        <header>
+          <h2>Soft and Fluffly Donut</h2>
+          <p>Home Simpson used this recipe as a model for the intro scene of The Simpsons.</p>
+          <a href="#">Mmmmmmmmm... doughnuts...</a>
+        </header>
+        <ul>
+          <li>D'oh!</li>
+          <li>Diet</li>
+          <li>Supersize it</li>
+        </ul>
+      </article>
+      <!-- a recipie -->
+      <article class="recipe-card">
+        <img src="https://via.placeholder.com/300" alt="temporary image placeholder">
+        <header>
+          <h2>Crema Catalana</h2>
+          <p>Crispy, caramelized and creamy Catalan dessert.</p>
+          <a href="#">I't lit</a>
+        </header>
+        <ul>
+          <li>Delicious</li>
+          <li>On fire</li>
+        </ul>
+      </article>
+    </main>
+    <aside>
+      <!-- navigation -->
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item"><a href="#" class="main-nav-link">Cakes</a></li>
+          <li class="main-nav-item"><a href="#" class="main-nav-link">Croissants</a></li>
+          <li class="main-nav-item"><a href="#" class="main-nav-link">Donuts</a></li>
+          <li class="main-nav-item"><a href="#" class="main-nav-link">Muffins</a></li>
+          <li class="main-nav-item"><a href="#" class="main-nav-link">Scones</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <footer>
+      <!-- contact, copyright, nav link to top -->
+      <p>For custom orders contact the &#x1F308; bakery at this <a href="mailto:goods@therainbowbakery.com">address</a>.</p>
+      <p>If you steal any of our content your life will be in B&W.</p>
+      <p>&copy; 2019 - forever</p>
+      <p><a href="#top">Back to the beggining of the rainbow.</a></p>
+    </footer>
   </div>
+
+  <button class="btn-about" id="btnAbout">About this site</button>
+
+  <section class="section-about visible" id="sectionAbout">
+    <div>
+      <h2>About the &#x1F308; bakery</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ratione eaque, ab veritatis nemo, repellendus nobis tempore voluptatum a aliquam consequuntur facere consequatur magni ut autem nisi beatae, ducimus accusamus.</p>
+    </div>
+    <button class="btn-about" id="btnBack">Back to site</button>
+  </section>
   
+<script src="css-grid-layout.js"></script>
 </body>
 </html>

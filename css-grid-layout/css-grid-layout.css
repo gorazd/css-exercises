@@ -1,35 +1,54 @@
+/****************
+---------------------------
+ Layout:  The Rainbow Bakery
+ Author:  Gorazd
+ Date:    28.5.2019
+ ---------------------------
+ Table of Contents
+ - Basics
+ - Layout
+ - Typography
+ ---------------------------
+****************/
+
 * {
   box-sizing: border-box;
 }
 
+/****************
+ Basics
+****************/
 :root {
+  /* variables */
   --padding: 1rem;
+  --brand-color: purple;
+  --alt-color: pink;
+  --text-color: #222;
+  --bg-color: #eee;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 150%;
+  color: var(--text-color);
 
   background: linear-gradient(red 16%, orange 16% 32%, yellow 32% 48%, green 48% 64%, blue 64% 80%, purple 80%);
 }
 
+/****************
+ Layout
+****************/
 .wrapper {
   display: grid;
+  grid-template-columns: 1fr;
 
   background-color: white;
   border: 5px solid black;
-
-  grid-template-columns: 1fr;
 }
 
-header {
+.main-header {
   padding: var(--padding);
   
   order: -2;
@@ -54,16 +73,160 @@ footer {
   background-color: rgba(254, 193, 204, .2);
 }
 
+/****************
+ Typography
+****************/
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .3em;
+  font-weight: 400;
+}
+
+h2 {
+  margin-top: 0;
+
+  font-size: 1.4em;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:link{
+  color: var(--brand-color);
+  text-decoration-color: var(--alt-color);
+  text-decoration-style: double;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+}
+
+/****************
+ Navigation
+****************/
+.main-nav {
+  
+}
+.main-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.main-nav-item {
+
+}
+.main-nav-item-link {
+
+}
+
+.btn-about {
+  padding: 10px;
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  border: 0;
+  border-radius: 7px;
+  color: var(--bg-color);
+  background-color: var(--brand-color);
+}
+
+/****************
+ Recipes
+****************/
+.recipe-card {
+  padding: var(--padding);
+  margin-bottom: 20px;
+  
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.recipe-card header {
+  
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recipe-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  grid-column: span 2;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.recipe-card ul li {
+  padding: 2px 10px;
+  margin-right: 5px;
+
+  font-size: .7em;
+  text-transform: uppercase;
+
+  color: var(--bg-color);
+  background-color: var(--brand-color);
+  border-radius: 3px;
+}
+
+/****************
+ About
+****************/
+.section-about {
+  position: fixed;
+  top: 0; 
+  right :0;
+  bottom: 0; 
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+
+  transform: translateX(100%);
+  transition: transform 200ms ease-out;
+}
+
+.section-about.visible {
+  transform: translateX(0);
+}
+
+.section-about > div {
+  padding: var(--padding);
+  max-width: 680px;
+}
+
 /* When the screen size is larger than 700px */
 @media (min-width: 700px) {
   :root {
     --padding: 30px;
   }
   .wrapper {
+    margin: 20px auto;
+    max-width: 680px;
+
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    /* grid-template-rows: 1fr 4fr 1fr; */
   }
-  header {
+  .main-header {
     grid-area: 1 / 1 / 2 / 3;
   }
   aside {
