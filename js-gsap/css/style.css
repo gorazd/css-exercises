@@ -2,10 +2,12 @@
   --base-color: #222;
   --border-color: #707070;
   --hover-color: #FBF0F2;
+  --blob-color: #B9FCFE;
 }
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -35,9 +37,10 @@ p {
 }
 
 .wrapper {
-  max-width: 800px;
+  min-width: 800px;
   min-height: 600px;
 
+  position: relative;
   overflow: hidden;
 
   box-shadow: 0 5px 20px rgba(100,100,100,.1);
@@ -47,6 +50,13 @@ p {
 
 .card {
   padding: 50px;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top:0;
+  left: 0;
 
   display: grid;
   grid-template-columns: 3.5fr 4.5fr;
@@ -111,3 +121,40 @@ p {
 .card__link:hover:before {
   transform: translateX(0);
 }
+
+.navigation {
+  padding: 0 20px;
+  position: fixed;
+  bottom: 40px;
+
+  background-color: var(--blob-color);
+  border-radius: 30px;
+}
+
+.navigation__list {
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.navigation__listitem {
+  margin-right: 20px;
+}
+
+.navigation__listitem:last-of-type {
+  margin-right: 0;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: var(--base-color);
+}
+.navigation__link:hover,
+.navigation__link.active {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+

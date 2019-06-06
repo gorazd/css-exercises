@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GSAP Cards</title>
   <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans:300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styyle.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <div class="wrapper">
 
-    <article class="card">
+    <article class="card" id="dolphin">
       <img src="img/dolphin.svg" width="180" alt="Dolphin illustration." class="card__image">
       <img src="img/blob-1.svg" alt="" class="card__image--bg">
       <header class="card__header">
@@ -22,7 +22,35 @@
       </header>
     </article>
 
+    <article class="card" id="island">
+      <img src="img/island.svg" width="180" alt="Island illustration." class="card__image">
+      <img src="img/blob-2.svg" alt="" class="card__image--bg">
+      <header class="card__header">
+        <h2 class="card__title">Palm oil effects</h2>
+        <p class="card__description">Palm oil has been and continues to be a major driver of deforestation of some of the world’s most biodiverse forests, destroying the habitat of already endangered species like the Orangutan, pygmy elephant and Sumatran rhino. This forest loss coupled with conversion of carbon rich peat soils are throwing out millions of tonnes of greenhouse gases into the atmosphere and contributing to climate change.</p>
+        <a href="#" class="card__link">What you need to know</a>
+      </header>
+    </article>
+
+    <article class="card" id="earth">
+      <img src="img/earth.svg" width="180" alt="Planet Earth illustration." class="card__image">
+      <img src="img/blob-3.svg" alt="" class="card__image--bg">
+      <header class="card__header">
+        <h2 class="card__title">Climate crisis</h2>
+        <p class="card__description">A report by experts from 27 national science academies has set out the widespread damage global heating is already causing to people’s health and the increasingly serious impacts expected in future. Scorching heatwaves and floods will claim more victims as extreme weather increases but there are serious indirect effects too, from spreading mosquito-borne diseases to worsening mental health.</p>
+        <a href="#" class="card__link">Read the  health report</a>
+      </header>
+    </article>
+
   </div>
+
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__listitem"><a href="#dolphin" class="navigation__link">Dolphins and plastic</a></li>
+      <li class="navigation__listitem"><a href="#island" class="navigation__link">Palm oil effects</a></li>
+      <li class="navigation__listitem"><a href="#earth" class="navigation__link">Climate crisis</a></li>
+    </ul>
+  </nav>
 
   <script src="js/TweenMax.js"></script>
   <script>
