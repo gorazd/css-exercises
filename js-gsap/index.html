@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GSAP Cards</title>
+  <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <article class="card">
+      <header class="card__header">
+        <h2 class="card__title">Dolphins and plastic</h2>
+        <p class="card__description">Almost ten per cent of whales, dolphins, and porpoises examined as part of a new Irish study were found to have plastics in their digestive tracts. The study published in Environmental Pollution found that 8.5 per cent (45 individuals) of Irish cetaceans tested had marine debris in their stomachs and intestines.</p>
+        <a href="#" class="card__link">Learn about the research</a>
+      </header>
+      <img src="img/dolphin.svg" width="180" alt="" class="card__image">
+      <img src="img/blob-1.svg" alt="" class="card__image--bg">
+    </article>
+
+  </div>
+
+  <script src="js/TweenMax.js"></script>
+  <script>
+    // Tween Max
+    // TweenMax.from(".card__image--bg", .72, {
+    //   y:"-1500",
+    //   repeat: -1,
+    //   yoyo: true,
+    //   ease: Elastic.easeInOut
+    // });
+
+    // TimelineMax
+    // var timeline = new TimelineMax({repeat:-1, yoyo: true});
+    // timeline.add(
+    //   TweenMax.from(".card__image--bg", 1, {
+    //     y:"-1500",
+    //     ease: Elastic.easeInOut
+    //   })
+    // );
+    // timeline.from(".card__image", 1, {
+    //     y:"500",
+    //     ease: Elastic.easeInOut
+    //   }, "-=.5");
+    // timeline.add(
+    //   TweenMax.from(".card__title", .2, {
+    //     opacity:0,
+    //     y:"-10",
+    //     ease: Power0.easeOut
+    //   })
+    // );
+    // timeline.add(
+    //   TweenMax.from(".card__description", .2, {
+    //     opacity:0,
+    //     y:"-10",
+    //     ease: Power0.easeOut
+    //   })
+    // );
+    // timeline.add(
+    //   TweenMax.from(".card__link", .2, {
+    //     opacity:0,
+    //     y:"20",
+    //     ease: Power0.easeOut
+    //   })
+    // );
+
+  </script>
+</body>
+</html>
