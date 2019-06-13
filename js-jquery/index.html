@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery</title>
+</head>
+<body>
+  
+
+  <!-- html -->
+  <div class="container">
+    <button class="myButton">My Button</button>
+  </div>
+
+  <style>
+  .myButton {
+    display: none;
+  }
+  </style>
+  <!-- jQuery CDN (check the version they use) -->
+  <!-- https://code.jquery.com/ -->
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+
+  <script>
+    // your code that goes online
+    $('.myButton').show();
+
+    // add an element at the end of the .container
+    $('.container').append($('.myButton'));
+
+    // select the item from Mens and insert it into .womens 
+    // $('.womens').append($('.mens .item'))
+  </script>
+
+</body>
+</html>
