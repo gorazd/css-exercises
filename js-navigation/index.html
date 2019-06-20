@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Navigation</title>
+  <style>
+    body { 
+      transition: background-color 1s ease; 
+      font-size: 400%;
+    }
+    ul { 
+      padding: 0; 
+      margin: 0; 
+      list-style: none; 
+    }
+    a, a:link { 
+      color: #666; 
+      text-decoration: none; 
+      text-shadow: 2px 2px 0 rgba(255,255,255,1); 
+    }
+    a.main-nav-link-active { color: #111; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <ul>
+      <li><a class="main-nav-link" href="#" data-color="#ff9393">Red</a></li>
+      <li><a class="main-nav-link" href="#" data-color="#00ff00">Green</a></li>
+      <li><a class="main-nav-link" href="#" data-color="#ff00ff">Purple</a></li>
+      <li><a class="main-nav-link" href="#" data-color="#ffaa00">Orange</a></li>
+      <li><a class="main-nav-link" href="#" data-color="#ffbb00">Mango</a></li>
+      <li><a class="main-nav-link" href="#" data-color="#0000ff">Blue</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // store all the link
+    var links = document.getElementsByClassName('main-nav-link');
+    // calculate the length of the array 
+    var numberOfLinks = links.length;
+    // a variable to store the last link clicked
+    var lastLinkClicked;
+    
+    // loop through all the links
+    for ( var n = 0; n < numberOfLinks; n++ ) {
+
+      // links[0] = 1
+      // links[1] = 2
+      // links[2] = 3
+
+      links[n].addEventListener('click', colorMeBlue);
+    }
+    // end for loop
+
+    function colorMeBlue() {
+      // check if the variable is not undefined
+      if ( lastLinkClicked ) {
+        lastLinkClicked.classList.remove('main-nav-link-active');
+      }
+      // this keyword refers to the event target
+      this.classList.add('main-nav-link-active');
+      // store the last link clicked
+      lastLinkClicked = this;
+
+      // color the body
+      // console.log(this.dataset.color);
+      document.body.style.backgroundColor = this.dataset.color;
+    }
+
+  </script>
+</body>
+</html>
