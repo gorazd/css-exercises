@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Big black hole</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ball"></div>
+  
+  <nav>
+    <button id="bigBlueBtn">Big and blue</button>
+    <button class="btn-green">Green</button>
+    <button class="btn-default">Back to black</button>
+  </nav>
+
+  <div class="zombie">
+      <svg id="zombie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 244" width="100" height="100">
+        
+        <g>
+          <circle cx="122" cy="122" r="119.5" 
+          fill="#3B8D70" 
+          stroke="#000" 
+          stroke-width="5" 
+          stroke-dasharray="1000"
+          stroke-dashoffset="1000"
+          class="btn-default" />
+
+          <rect width="50" fill="var(--myColor)" height="50" x="calc(122 - 25)" y="calc(122 - 25)" />
+        </g>
+        
+      </svg>
+  </div>
+
+  <script>
+    // var, let, const
+    const ball = document.querySelector('.ball'); 
+    const btnBlue = document.querySelector('#bigBlueBtn');
+    const btnBlack = document.querySelector('.btn-default'); 
+    const btnGreen = document.querySelector('.btn-green'); 
+
+    btnBlue.addEventListener('click', makeItBlue);
+
+    function makeItBlue() {
+      ball.style.setProperty('--bgColor', '#3C1FBC');
+      ball.style.setProperty('--scale', '20');
+    }
+
+    btnBlack.addEventListener('click', makeItBlack);
+
+    function makeItBlack() {
+      ball.style.setProperty('--bgColor', 'black');
+      ball.style.setProperty('--scale', '10');
+    }
+
+    btnGreen.addEventListener('click', makeItGreen);
+
+    function makeItGreen() {
+      ball.style.setProperty('--bgColor', '#3B8D70');
+    }
+
+    const zombie = document.querySelector('#zombie');
+    zombie.addEventListener('mouseover', colorMeZombie);
+    zombie.addEventListener('mouseout', uncolorMeZombie);
+
+    function colorMeZombie() {
+      zombie.querySelector('circle').style.setProperty('fill', 'yellow');
+      zombie.querySelector('circle').style.setProperty('stroke', 'yellow');
+      zombie.querySelector('rect').style.setProperty('--myColor', '#3B8D70');
+      zombie.querySelector('rect').style.setProperty('transform', 'scale(10)');
+    }
+    function uncolorMeZombie() {
+      zombie.querySelector('circle').style.setProperty('fill', '#3B8D70');
+      zombie.querySelector('circle').style.setProperty('stroke', '#000');
+    }
+
+
+    
+// block scope local variables
+// let -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+// const -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+
+// CSS custom properties
+// https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+
+// querySelector
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+
+// setProperty
+// https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty
+
+  </script>
+</body>
+</html>

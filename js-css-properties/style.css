@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:linear-gradient(#eee, #ddd);
+}
+
+.ball {
+  --scale: 10;
+  --bgColor: #000;
+
+  width: 20px;
+  height: 20px;
+
+  transform: scale(var(--scale));
+  transition: transform 500ms cubic-bezier(.74,-0.48,.37,1.41), 
+              background-color 250ms ease 100ms;
+  will-change: transform;
+  /*
+  https://cubic-bezier.com/#.74,-0.48,.37,1.41
+  */
+  border-radius: 50%;
+  background-color: var(--bgColor);
+}
+
+nav {
+  position: absolute;
+  bottom: 10vh;
+}
+
+.zombie {
+  position: absolute;
+  top: 5vh;
+}
+
+svg {
+  --mySize: 50;
+  --myColor: blue;
+}
+
+.zombie svg circle {
+  transition: fill 500ms ease,
+              stroke 200ms ease;
+
+  animation: dash 2s linear forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
