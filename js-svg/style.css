@@ -16,8 +16,8 @@ body {
 }
 
 svg {
-  border: 5px solid rgb(207, 158, 207);
-  background-image: linear-gradient(blue, #4444ff, purple, black, black);
+  border: 5px solid #9999ff;
+  background-image: linear-gradient( #2E9CFF, #004FE7, #4800B9 , black, black);
   background-size: 100% 300%;
   background-position: 0 0;
 
@@ -75,7 +75,7 @@ svg {
     transform: scale(.9);
   }
   50%, 70% {
-    fill: #DA8B31;
+    fill: #DA4731;
     transform: scale(1);
   }
   100% {

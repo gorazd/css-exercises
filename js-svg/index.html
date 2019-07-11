@@ -13,7 +13,7 @@
 
     <!-- Filters -->
     <filter id="sunGlow">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
     </filter>
 
     <defs>
@@ -23,10 +23,15 @@
         <stop offset="100%" stop-color="#9999ff" />
       </linearGradient>
 
-      <!-- Radial gradient -->
+      <!-- Radial gradients -->
       <radialGradient id="cloudGradient">
         <stop offset="10%" stop-color="rgba(255,255,255,1)" />
         <stop offset="95%" stop-color="rgba(255,255,255,.8)" />
+      </radialGradient>
+
+      <radialGradient id="sunOverlayGradient">
+        <stop offset="10%" stop-color="rgba(255,233,26,1)" />
+        <stop offset="95%" stop-color="rgba(255,233,26,.1)" />
       </radialGradient>
 
       <!-- Clip path -->
@@ -38,6 +43,7 @@
     <g id="sun">
       <circle id="sunGlow" cx="250" cy="150" r="50" fill="yellow" stroke="none" opacity=".5" filter="url(#sunGlow)" />
       <circle id="sunCore" cx="250" cy="150" r="50" fill="none" stroke="none" />
+      <circle cx="250" cy="150" r="50" fill="url(#sunOverlayGradient)" />
     </g>
 
     <g id="cloud" transform="translate(100 150) scale(1.2) skewX(-20)" clip-path="url(#cut-off-bottom)" fill="url(#cloudGradient)" >
@@ -71,6 +77,8 @@
 </html>
 
 <!--
+  Resources ***
+
   SVG and it's elements
   https://developer.mozilla.org/en-US/docs/Web/SVG
   https://developer.mozilla.org/en-US/docs/Web/SVG/Element
