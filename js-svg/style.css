@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  border: 5px solid rgb(207, 158, 207);
+  background-image: linear-gradient(blue, #4444ff, purple, black, black);
+  background-size: 100% 300%;
+  background-position: 0 0;
+
+  animation-name: skyAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes skyAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50%, 70% {
+    background-position: 0 70%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+#sun {
+  transform-origin: 0 100%;
+
+  animation-name: sunAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes sunAnimation {
+  0% {
+    transform: rotate(-.25turn);
+  }
+  50%, 70% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(.25turn);
+  }
+}
+
+#sunCore {
+  transform-origin: center center;
+  animation-name: sunCoreAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes sunCoreAnimation {
+  0% {
+    fill: yellow;
+    transform: scale(.9);
+  }
+  50%, 70% {
+    fill: #DA8B31;
+    transform: scale(1);
+  }
+  100% {
+    fill: red;
+    transform: scale(1.9);
+  }
+}
+
+.wave {
+  animation-name: waveAnimation;
+  animation-duration: 2;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
