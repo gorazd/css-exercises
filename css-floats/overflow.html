@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS overflow</title>
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- the overflow property  -->
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+
+      border: 5px solid blue;
+    }
+    .container-hidden {
+      overflow: hidden;
+    }
+    .container-scroll {
+      overflow: scroll;
+    }
+    .container-x-and-y {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    h1 {
+      margin: 0;
+
+      font-size: 3em;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+  </style>
+
+  <article class="container container-hidden">
+    <h1>Amazing CSS is going to happen</h1>
+  </article>
+
+  <article class="container container-scroll">
+    <h1>Amazing CSS is going to happen</h1>
+  </article>
+
+  <article class="container container-x-and-y">
+    <h1>Amazing CSS is going to happen</h1>
+  </article>
+
+</body>
+</html>
