@@ -1,0 +1,54 @@
+article {
+    max-width: 20em;
+    padding: 2em;
+
+    /* position: relative; */
+
+    background-color: pink;
+}
+
+div {
+    width: 120px;
+    height: 120px;
+
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 120px;
+
+    background: black;
+    color: white;
+    border-radius: 50%;
+
+    /* by default the position property is static */
+    position: static;
+
+    /*  position properties 
+        top, right, bottom, left, z-index
+    
+    */
+}
+
+.relative {
+    position: relative;
+    top: 60px;
+    left: 60px;
+}
+
+.absolute {
+    background-color: red;
+
+    /*  it positions the element relatively to it's closest positioned parent.
+        if there is no positioned parent, then to the body
+    */
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+.fixed {
+    background-color: blue;
+
+    position: fixed;
+    top: 60px;
+    right: 60px;
+}

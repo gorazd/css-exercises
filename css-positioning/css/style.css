@@ -1,0 +1,32 @@
+* {
+
+}
+
+article {
+  border: 1px solid blue;
+}
+
+p {
+  padding: 3em;
+  margin: 3em;
+  
+  background-color: pink;
+  border: 1px solid pink;
+}
+
+p:nth-child(2) {
+  display: none;
+  background-color: #ff6666;
+}
+
+p:nth-child(3) {
+  background-color: red;
+}
+
+.inline-block p {
+  display: inline-block;
+}
+
+.inline p {
+  display: inline;
+}
