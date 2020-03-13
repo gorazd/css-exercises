@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box model II.</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  .main {
+    max-width: 600px;
+    margin: 0 auto;
+
+    border: 1px solid pink;
+  }
+  .fancy {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+
+    border-style: dashed;
+    border-width: 10px;
+  }
+  .round-box {
+    margin: 0 auto;
+    padding: 60px;
+
+    width: 300px;
+    height: 300px;
+
+    /* text-align: center; */
+
+    background-color: yellow;
+    border-radius: 50%;
+  }
+
+  /* */
+  .box-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    border: 10px solid pink;
+  }
+  .box-list-item {
+    display: inline-block;
+
+
+    border: 100px solid yellow;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati aliquid ut adipisci possimus ipsam nostrum incidunt aut. Recusandae minus a laborum vitae, eveniet incidunt accusamus, consequuntur aut illo, tenetur aperiam?
+  </div>
+  <div class="fancy">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati aliquid ut adipisci possimus ipsam nostrum incidunt aut. Recusandae minus a laborum vitae, eveniet incidunt accusamus, consequuntur aut illo, tenetur aperiam?
+  </div>
+  <div class="round-box">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati aliquid ut adipisci possimus ipsam nostrum incidunt aut. Recusandae minus a laborum vitae, eveniet incidunt accusamus, consequuntur aut illo, tenetur aperiam?
+  </div>
+
+  <ul class="box-list">
+    <li class="box-list-item">A</li>
+    <li class="box-list-item">B</li>
+    <li class="box-list-item">C</li>
+  </ul>
+
+</body>
+</html>

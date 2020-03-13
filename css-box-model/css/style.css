@@ -1,0 +1,61 @@
+* {
+  border: 1px solid red;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  /* Box Model 
+      - content
+      - padding
+      - border
+      - margin
+  *//
+
+  /* content */
+  width: 300px;
+  min-height: 100px;
+  /* min-, max-width, min-, max-height */
+
+  /* padding */
+  padding: 100px; 
+  /* when there is one value it defines top, right, bottom and left side */
+
+  /* border */
+  border: 5px solid black;
+
+  border-left-color: red;
+
+  /* margin */
+  margin: 100px;
+
+}
+
+.content {
+  background-color: pink;
+
+  /* the width and height properties define the size of the content box */
+  box-sizing: content-box;
+
+  /* display: none; */
+}
+
+.box {
+  background-color: mediumspringgreen;
+
+  /* the width and height properties define the size of the content/padding/border box */
+  box-sizing: border-box;
+}
+
+/* INLINE element */
+span {
+  border-color: blue;
+
+  width: 200px;
+  height: 200px;
+
+  margin: 5px 10px 20px 30px;
+  padding: 5px 10px 20px 30px;
+}
