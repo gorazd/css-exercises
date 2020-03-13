@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-size: 300%;
+  color: white;
+}
+
+.container {
+
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+
+  display: block;
+  position: relative;
+
+  /* the default value is 0
+
+  z-index: 0;
+  */
+
+  text-align: center;
+  line-height: 200px;
+
+  background-color: yellow;
+
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.box:nth-child(2) {
+  top: -40px;
+  left: 40px;
+
+  background-color: yellowgreen;
+}
+
+.box:nth-child(3) {
+  top: -80px;
+  left: 80px;
+
+  background-color: green;
+}
+
+.box:hover {
+  z-index: 1;
+  border: 10px solid greenyellow;
+
+  opacity: 1;
+}
