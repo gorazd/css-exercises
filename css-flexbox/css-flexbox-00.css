@@ -52,5 +52,8 @@ body {
   /* shorthand */
   flex: 0 1 20%;
 
+  /* overwrite the align-items property */
+  align-self: auto;
+
   border: 10px solid blue;
 }
