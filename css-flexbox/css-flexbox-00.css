@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.flex-container {
+  /* become a flex container */
+  display: flex;
+
+  /* reset list styles */
+  padding-left: 0;
+  list-style: none;
+
+  border: 10px solid red;
+}
+
+.flex-container-row {
+  /* default flexbox container properties */
+  flex-direction: row;
+  /* should the items wrap to a new line when they don't fit the container  */
+  flex-wrap: nowrap;
+  /* SHORTHAND for direction and wrap */
+  flex-flow: row nowrap;
+
+  /* distribute items across the MAIN axis */
+  justify-content: flex-start;
+  /* align items across the CROSS axis */
+  align-items: stretch;
+
+}
+.flex-container-column {
+  flex-direction: column;
+}
+
+.flex-container-center {
+  width: 10em;
+  height: 10em;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+  /* default flex item properties */
+  order: 0;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  /* shorthand */
+  flex: 0 1 20%;
+
+  border: 10px solid blue;
+}
