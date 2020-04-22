@@ -1,0 +1,63 @@
+/*
+
+  CSS Grid
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #eee;
+}
+
+/* base elements */
+
+.wrapper {
+  width: 100%;
+  /* define the wrapper as the grid container */
+  display: grid;
+
+  /* define the grid columns */
+  grid-template-columns: 400px 200px;
+  /* using the fraction units */
+  grid-template-columns: 2fr 1fr;
+
+  /* define the grid rows */
+  grid-template-rows: 100px 300px 100px;
+
+
+  border: 5px solid pink;
+}
+
+header {
+  /* start and end line (columns) */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* shorthand grid-column: start / end; */
+  grid-column: 1 / 3;
+  /* shorthand using the span keyword grid-column: span 2 (span across 2 tracks) */
+  /* without specifying the exact track line numbers */
+  grid-column: span 2;
+
+
+  border: 5px solid yellow;
+}
+
+main {
+  /* linear gradient (angle, color *color start, color 2 *color start) */
+  background: linear-gradient(45deg,orange 50%, yellow 50%);
+  border: 5px solid red;
+}
+
+aside {
+  border: 5px solid blue;
+}
+
+footer {
+  grid-column: span 2;
+
+  border: 5px solid yellow;
+}
