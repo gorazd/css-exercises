@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Hamburger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="menu-button" class="menu-button"><img src="burger.svg" alt=""></button>
+
+  <nav id="menu" class="menu">
+    <ul class="menu-list">
+      <li><a href="#">Lorem.</a></li>
+      <li><a href="#">Quaerat!</a></li>
+      <li><a href="#">Consequatur.</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h1>1 Lorem.</h1>
+    <h1>2 Laborum.</h1>
+    <h1 class="special">3 Fugiat.</h1>
+    <h1>4 Perspiciatis?</h1>
+    <h1>5 Doloribus?</h1>
+  </article>
+
+  <script>
+    // select the burger button and save it in the menuBtn variable
+    var menuBtn = document.getElementById("menu-button");
+    var menu = document.getElementById("menu");
+    // add an event to our button
+    menuBtn.addEventListener("click", openMenu);
+    // the openMenu function
+    function openMenu() {
+      // log you clicked into console
+      console.log("you clicked");
+      // add the class "menu-visible" to the element with the ID "menu"
+      // if it doesn't have one, otherwise remove it
+      menu.classList.toggle("menu-visible");
+    }
+
+    /* multiline comment */
+    // one line comment
+
+    // log messages to console (Cmd + Option + J)
+    console.log("hello students");
+    console.log(2 + 2);
+
+  </script>
+</body>
+</html>

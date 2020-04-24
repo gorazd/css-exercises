@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #333;
+  background-color: #eee;
+  border: 10px solid pink;
+}
+
+/* media query */
+@media (max-width: 760px) {
+  /* this code only gets executed if the condition is met */
+  /* in this case if the browser viewport is smaller than 760px */
+  body {
+    border-color: red;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    border-color: purple;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 20%;
+  /* translate offsets the element for the giving number */
+  transform: translateX(100%);
+  /* use a transition for a particular property */
+  transition: transform 100ms ease-in;
+
+  background-color: aquamarine;
+}
+
+.menu-visible {
+  transform: translateX(0);
+}
+
+.menu-list {
+  font-size: 5em;
+  list-style: none;
+}
+@media (max-width: 760px) {
+  .menu-list {
+    font-size: 2em;
+  }
+}
+
+.menu-list li {
+  margin: 0 0 .5em 0;
+}
+
+.menu-list li a {
+  color: #333;
+}
+
+.menu-button {
+  padding: 10px;
+
+  position: relative;
+  top: 20px;
+  left: 20px;
+
+  border: 0;
+}
+
+/* */
+article {
+  margin: 100px;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@media (max-width: 500px) {
+  article {
+    margin: 50px;
+  }
+}
+
+.special {
+  background-color: yellow;
+}
+
+@media (max-width: 760px) {
+  .special {
+    order: -1;
+    background-color: mintcream;
+  }
+}
