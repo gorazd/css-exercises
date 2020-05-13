@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #f00;
+  --text-color: #eee;
+
+  --default-padding: 1em;
+}
+
+@media (min-width: 400px) {
+  :root {
+    --default-padding: 2em;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  color: var(--main-color);
+}
+
+/* the grid */
+
+.grid {
+  padding: var(--default-padding);
+
+  display: grid;
+  border: 10px solid var(--main-color);
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    --main-color: lavender;
+    --text-color: purple;
+  }
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    --main-color: orange;
+  }
+}
+
+/* grid items */
+
+.grid-item {
+  width: 200px;
+  height: 200px;
+
+  font-size: 10em;
+  text-align: center;
+
+  background-color: var(--main-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #111;
+  --text-color: #eee;
+
+  --grid-columns: 1fr 1fr;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --main-color: #ddd;
+    --text-color: #222;
+    --grid-columns: 1fr 1fr 1fr;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+}
+
+.grid-item {
+  width: 100%;
+  min-height: 200px;
+
+  font-size: 10em;
+  text-align: center;
+
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
