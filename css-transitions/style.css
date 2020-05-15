@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+section {
+  margin: 2em 0;
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  padding: .2em .5em;
+  display: inline-block;
+
+  color: white;
+  background-color: blue;
+  text-decoration: none;
+
+  /* define the transition property, duration, timing function and delay */
+  transition-property: background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in;
+  transition-delay: 1500ms;
+}
+
+a:hover {
+  background-color: red;
+
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+button {
+  margin-top: 1em;
+  padding: 2em 4em;
+
+  font-size: 1em;
+
+  background-color: red;
+  border-color: blue;
+  border-width: 5px;
+  color: white;
+
+  transition-property: padding;
+  transition-duration: 1s;
+}
+
+button:hover {
+  padding: 4em 5em;
+}
+
+/* transforms */
+
+.box {
+  width: 5em;
+  height: 5em;
+
+  transition-property: transform;
+  transition-duration: 345ms;
+
+  background-color: yellow;
+}
+
+.scale {
+  background-color: yellowgreen;
+
+  transform: scale(2); /* one argument is for both the X and Y axis */
+  /* transform: scale(2, 2); if you have to aruments, the first is X and the second Y */
+}
+
+.scale-and-rotate {
+  background-color: green;
+
+  transform: scale(2) rotate(45deg);
+}
+
+section.three-d-transforms {
+
+}
+
+.rotate-d {
+  transform: rotate3d(1,1,1,45deg)
+}
