@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom</title>
+  <style>
+
+    .wrapper {
+      width: 100%;
+      min-height: 90vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .interactive {
+      width: 15rem;
+      height: 15rem;
+
+      /* hide what goes beyond the elemnts borders */
+      overflow: hidden;
+    }
+
+    .interactive img {
+      /* different transitions for hover/un-hover */
+      transition: transform .5s ease-out;
+    }
+
+    .interactive:hover img {
+      transition: transform .125s ease-in;
+      transform: scale(1.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- link -->
+    <a href="#" class="interactive">
+      <img src="http://placekitten.com/300/300" alt="">
+    </a>
+    <!-- end link -->
+
+  </div>
+
+</body>
+</html>

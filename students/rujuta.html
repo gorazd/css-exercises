@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover</title>
+  <style>
+    .wrapper {
+      width: 500px;
+      height: 500px;
+
+      position: relative;
+
+      background-color: rgba(189, 189, 50, .5);
+    }
+    .hidden-image {
+      display: none;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background-color: rgba(189, 189, 50, .5);
+    }
+
+    h4 {
+      padding: 20px;
+      display: inline-block;
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+
+      background: rgba(189, 189, 50, .5);
+    }
+    /* hover */
+    h4:hover + .hidden-image {
+      display: block;
+
+    }
+
+    /* second */
+    .interactive-second h4 {
+      top: auto;
+      bottom: 20px;
+    }
+    .interactive-second .hidden-image {
+      background-color: rgba(189, 189, 50, 1);
+    }
+
+    .letter-mask {
+      width: 16rem;
+      height: 20rem;
+
+      overflow: hidden;
+
+
+      transform: translateX(2rem) rotate(45deg);
+    }
+
+    .letter-wrapper {
+      margin:0;
+      padding:0;
+      width: 16rem;
+
+      display: flex;
+      flex-flow: column;
+
+      animation: animate-letters 2s steps(5, start) forwards infinite;
+    }
+
+    .letter {
+      width:16rem;
+      height: 16rem;
+
+      font-size: 16rem;
+      line-height: 16rem;
+      text-align: center;
+
+      color: rgba(189, 189, 50, 1);
+      /* display:inline-block; */
+    }
+    .second {
+    }
+
+    @keyframes animate-letters {
+      to {
+        transform: translateY(-80rem);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- ui -->
+    <div class="interactive">
+      <h4>Hover me</h4>
+      <div class="hidden-image"></div>
+    </div>
+    <div class="interactive interactive-second">
+      <h4>Hover me too</h4>
+      <div class="hidden-image"></div>
+    </div>
+    <!-- content -->
+    <div class="letter-mask">
+      <p class="letter-wrapper">
+        <span class="letter">h</span>
+        <span class="letter">a</span>
+        <span class="letter">p</span>
+        <span class="letter">p</span>
+        <span class="letter">y</span>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

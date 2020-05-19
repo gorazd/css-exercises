@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card:nth-child(odd) {
+      justify-self: flex-end;
+    }
+
+    .card {
+      width: 250px;
+      height: 250px;
+
+      position: relative;
+
+      cursor: pointer;
+
+      background: linear-gradient(45deg,rgba(0, 58, 128, .5) 50%, rgba(0, 58, 128, .8) 50%);
+    }
+
+    .overlay {
+      background-color: rgba(0, 58, 128, .5);
+
+      transition: opacity 450ms ease-in 200ms;
+    }
+
+    .text {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 200%;
+      color: white;
+
+      transition: opacity 350ms ease-in,
+                  transform 350ms ease-in;
+    }
+
+    .text * {
+      margin: 0;
+    }
+
+    .text span {
+      position: absolute;
+      z-index: -1;
+
+      transform: translateX(-100%) translateY(-60%) scale(5);
+      color: rgba(0, 58, 128, 0.3);
+    }
+
+    .cover-all {
+      opacity: 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* HOVER */
+    .card:hover .overlay {
+      opacity: 1;
+      transition: opacity 200ms ease-in;
+    }
+
+    .card:hover .text {
+      opacity: 1;
+      transform: scale(1.05);
+      transition: opacity 350ms ease-in 200ms,
+                  transform 350ms ease-out 350ms;
+    }
+
+  </style>
+</head>
+<body>
+<div class="grid">
+  <div class="card">
+     <div class="text cover-all">
+       <h2>hello</h2>
+       <p><span>&</span> bye</p>
+     </div>
+     <div class="overlay cover-all"></div>
+  </div>
+  <div class="card">
+     <div class="text cover-all">
+       <h2>hello</h2>
+       <p><span>&</span> bye</p>
+     </div>
+     <div class="overlay cover-all"></div>
+  </div>
+  <div class="card">
+     <div class="text cover-all">
+       <h2>hello</h2>
+       <p><span>&</span> bye</p>
+     </div>
+     <div class="overlay cover-all"></div>
+  </div>
+  <div class="card">
+     <div class="text cover-all">
+       <h2>hello</h2>
+       <p><span>&</span> bye</p>
+     </div>
+     <div class="overlay cover-all"></div>
+  </div>
+</div>
+
+
+</body>
+</html>

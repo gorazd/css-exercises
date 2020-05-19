@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round</title>
+  <style>
+
+    .wrapper {
+      width: 100%;
+      min-height: 90vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .interactive {
+      width: 5rem;
+      height: 5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: .5rem dashed blue;
+      border-radius: 50%;
+      color: blue;
+      background-color: pink;
+
+      transition: none;
+
+      font-family: monospace;
+      font-size: 5em;
+      text-decoration: none;
+      line-height: .1em;
+    }
+
+    .interactive p {
+      /* transform: scaleY(.6); */
+    }
+
+    .interactive p span {
+      display: block;
+
+      transform-origin: top left;
+      transform: rotateZ(-90deg) translateY(.15em);
+    }
+
+    .interactive:hover {
+      transition: transform 1.5s linear;
+      transform: rotate(1turn);
+    }
+
+    .interactive:hover p {
+      transition: transform 1.5s linear;
+      transform: rotate(-1turn) scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- link -->
+    <a href="#" class="interactive">
+      <p>o<span>:</span></p>
+    </a>
+  </div>
+
+</body>
+</html>
