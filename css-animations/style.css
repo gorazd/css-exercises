@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --arrow-color: white;
+  --section-background: rgb(255, 165, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-size: 100%;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.first {
+  background-color: var(--section-background);
+
+  animation-name: backgroundChange;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.second {
+  background-color: var(--section-background);
+
+  background-image: url('https://images.unsplash.com/photo-1583169026785-e5e24b78a25f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=60');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* link */
+.going-down {
+  margin-bottom: 2em;
+
+  width: 2em;
+  height: 2em;
+
+  position: absolute;
+  left: calc(50% - 1em);
+  bottom: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 5px solid var(--arrow-color);
+  border-radius: 50%;
+
+  font-family: monospace;
+  font-size: 4em;
+  text-decoration: none;
+}
+
+.going-down:hover .arrow {
+  /* pause the animation */
+  animation-play-state: paused;
+}
+
+.going-up {
+  transform: rotate(.5turn)
+}
+
+/* span */
+.arrow {
+  display: block;
+  color: var(--arrow-color);
+
+  /* apply the animation */
+  animation-name: goingDown;
+  animation-duration: .8s;
+  animation-delay: 0s;
+
+  /* how many times should the animation play */
+  animation-iteration-count: infinite;
+  /* the animation should reverse direction each cycle */
+  animation-direction: alternate;
+  /* timing function */
+  animation-timing-function: linear;
+}
+
+/* animation of the arrow button */
+@keyframes goingDown {
+  0% {
+    transform: translateY(-20%) scale(1);
+  }
+  100% {
+    transform: translateY(10%) scale(1.1);
+    color: var(--arrow-color);
+  }
+}
+
+@media (orientation: landscape) {
+    /* new value for the variable */
+   :root {
+      --arrow-color: yellow;
+  }
+  .arrow {
+    /* by giving the value *none* you disable the animation */
+    /* animation-name: none; */
+  }
+}
+
+/* animation for the section background */
+@keyframes backgroundChange {
+  0% {
+    background-color: rgb(255, 165, 0);
+  }
+  25% {
+    background-color: rgb(0, 255, 166);
+  }
+  50% {
+    background-color: rgb(0, 94, 255);
+  }
+  75% {
+    background-color: rgb(191, 0, 255);
+  }
+  100% {
+    background-color: rgb(255, 165, 0);
+  }
+}
+
+/* muybridge animation */
+.muybridge {
+  width: 200px;
+  height: 90px;
+
+  background-image: url(muybridge.jpg);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+
+  animation-name: runningHorse;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(4, end);
+}
+
+@keyframes runningHorse {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -800px;
+  }
+}
