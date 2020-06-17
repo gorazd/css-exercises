@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS functions</title>
+</head>
+<body>
+
+
+  <script>
+    function printFriendlyMessage() {
+      console.log("hello");
+      // console.clear();
+    };
+    // call the function
+    printFriendlyMessage();
+
+    function printUnfriendlyMessage() {
+      console.log("go away");
+      // console.clear();
+    };
+    // call the function
+    printUnfriendlyMessage();
+
+    // abstract
+    function printMessage(myMessage, myName) {
+      console.log(myMessage + " " + myName + "!");
+    };
+    printMessage("hello", "Giuseppe");
+    printMessage("go away", "Gorazd");
+    printMessage("welcome back", "Hadeel");
+
+  </script>
+</body>
+</html>
