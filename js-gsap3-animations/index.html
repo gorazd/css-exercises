@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP3 </title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+
+      border-radius: 25%;
+      background-color: pink;
+    }
+    .rectangle {
+      width: 200px;
+      height: 100px;
+
+      border-radius: 25px;
+      background-color: pink;
+    }
+    h1 {
+      transform: translateX(-300px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Tween -->
+  <div class="box"></div>
+  <h1>Our Name</h1>
+
+  <!-- Timeline -->
+  <div class="rectangle"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+  <script>
+    /*
+      Tweening
+    */
+    console.log("gsaaaap");
+    // animate the box
+    // gsap.to(".box", { x: 700, duration: 1, delay: 1, repeat: 3, yoyo: true, onComplete: showMessage });
+    // gsap.fromTo(".box", { backgroundColor: "#ff0000"}, { backgroundColor: "#0000ff", delay: 1, duration: 5 });
+
+    // color change
+    gsap.from(".box", { backgroundColor: "#0000ff", delay: 1, duration: 3, onComplete: showName });
+    function showName() {
+      gsap.to("h1", { x: 0, duration: 1 })
+    };
+
+    function showMessage() {
+      console.log("first tween finished");
+      // gsap.to(".box", { scale: 2, rotate: 90, duration: 1 });
+    };
+
+    /*
+      Timeline
+    */
+    var ourTimeline = gsap.timeline();
+    ourTimeline.to(".rectangle", { backgroundColor: "red", duration: .5 });
+    ourTimeline.to(".rectangle", { x: 200, duration: .7 });
+    ourTimeline.to(".rectangle", { rotate: 180, duration: .5 });
+    ourTimeline.to(".rectangle", { x: 0, duration: .5 });
+    ourTimeline.to(".rectangle", { backgroundColor: "pink", duration: .5 });
+
+
+  </script>
+</body>
+</html>
