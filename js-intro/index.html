@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Intro</title>
+</head>
+<body>
+  <script>
+    // variables
+    var howAreYourFeeling = 'Fine'; // function scoped (var)
+    howAreYourFeeling = 'Fine';
+
+    const whatsYourName = 'Gorazd'; // you are not allowed to reassign the value to the const variable
+    let myAge = 24; // block scoped (let and const)
+
+    function calculateMyActualAge() {
+      let ageDifference = 15;
+      let myActualAge = myAge + ageDifference;
+      console.log("What a liar, you are " + myActualAge + " years old!");
+    };
+    // invoke the function
+    calculateMyActualAge();
+  </script>
+</body>
+</html>
